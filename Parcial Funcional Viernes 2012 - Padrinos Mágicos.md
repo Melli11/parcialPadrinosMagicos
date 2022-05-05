@@ -17,28 +17,30 @@ De los chicos se conoce su **nombre**, **edad**, **sus habilidades** y sus **des
       2. cosmo: dado un chico, lo hace “des”madurar, quedando con la mitad de años de edad. Como es olvidadizo, no le concede ningún deseo.
       3. muffinMagico: dado un chico le concede todos sus deseos. 
 
-***Nota importante**: no debe haber lógica repetida entre* wanda*,* cosmo *y* serMayor
+***Nota importante***: no debe haber lógica repetida entre* wanda*,* cosmo *y* serMayor
 
 2. **En busqueda de pareja**
    1. Se acerca el baile de fin de año y se quiere saber cuáles van a ser las parejas. Para esto las chicas tienen condiciones para elegir al chico con el que van a salir, algunas de ellas son:
-      1. tieneHabilidad unaHabilidad unChico *:* Dado un chico y una habilidad, dice si la posee.
-      2. esSuperMaduro: Dado un chico dice si es mayor de edad (es decir, tiene más de 18 años) y además sabe manejar.
+      1. **tieneHabilidad unaHabilidad unChico**: Dado un chico y una habilidad, dice si la posee.
+      2. **esSuperMaduro**: Dado un chico dice si es mayor de edad (es decir, tiene más de 18 años) y además sabe manejar.
+   
    2. Las chicas tienen un nombre, y una condición para elegir al chico con el que van ir al baile. Ejemplos:
     -- para Trixie la única condición es que el chico no sea Timmy, 
     --ya que nunca saldría con él
     trixie = Chica “Trixie Tang” noEsTimmy  
     vicky = Chica “Vicky” (tieneHabilidad “ser un supermodelo noruego”) 
 
-    Se pide definir el data Chica y desarrollar las siguientes funciones:
+    **Se pide definir el data Chica y desarrollar las siguientes funciones:**
 
-   1. quienConquistaA unaChica losPretendientes: Dada una chica y una lista de pretendientes, devuelve al que se queda con la chica, es decir, el primero que cumpla con la condición que ella quiere. Si no hay ninguno que la cumpla, devuelve el último pretendiente (una chica nunca se queda sola). (Sólo en este punto se puede usar recursividad)
-   2. Dar un ejemplo de consulta para una nueva chica, cuya condición para elegir a un chico es que este sepa cocinar.
+   3. **quienConquistaA unaChica losPretendientes**: Dada una chica y una lista de pretendientes, devuelve al que se queda con la chica, es decir, el primero que cumpla con la condición que ella quiere. Si no hay ninguno que la cumpla, devuelve el último pretendiente (una chica nunca se queda sola). (Sólo en este punto se puede usar recursividad)
+   
+   4. Dar un ejemplo de consulta para una nueva chica, cuya condición para elegir a un chico es que este sepa cocinar.
 
 3. **Da Rules ![](Aspose.Words.df28e612-e891-4b73-ae61-b31e4ab6141d.002.png)**
 
 Como no todo está permitido en el mundo mágico, Jorgen  Von Strángulo está encargado de controlar que se no se  viole lo establecido en “da Rules”: 
 
-    infractoresDeDaRules  :  Dada  una  lista  de  chicos,  devuelve  la  lista  de  los  nombres  de  aquellos que tienen deseos prohibidos.Un deseo  está  prohibido  si,  al  aplicarlo,  entre  las  cinco primeras habilidades, hay alguna prohibida.  En  tanto,  son  habilidades  prohibidas  enamorar,  matar y dominar el mundo. 
+-   **infractoresDeDaRules**:  Dada  una  lista  de  chicos,  devuelve  la  lista  de  los  nombres  de  aquellos que tienen deseos prohibidos.Un deseo  está  prohibido  si,  al  aplicarlo,  entre  las  cinco primeras habilidades, hay alguna prohibida.  En  tanto,  son  habilidades  prohibidas  enamorar,  matar y dominar el mundo. 
 
 4. **Justificaciones**  
 

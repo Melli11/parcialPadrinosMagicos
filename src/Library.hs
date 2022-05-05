@@ -14,8 +14,11 @@ data Chico = Chico {
     } deriving (Show,Eq)
 
 chico :: Chico
-chico = Chico "bobi" 10 [] [serMayor]
+chico = Chico "bobi" 10 ["Ser un supermodelo noruego"] [serMayor]
     
+chico2 :: Chico
+chico2 = Chico "bobi2" 10 ["Ser un supermodelo noruego"] [serMayor]
+
 chicoConHabilidad :: Chico
 chicoConHabilidad  = Chico "bobiHabilidoso" 10 ["Prog Haskell Super Sr"] []
 
@@ -31,10 +34,10 @@ taxiDriver  = Chico "bobiPeligroso" 19 ["Sabe manejar"] []
 chicoSinHabilidadCon2Deseos :: Chico
 chicoSinHabilidadCon2Deseos = Chico "bobi" 10 [] [aprenderHabilidades ["Andar en bicicleta"],serMayor]
 -- 1. **Concediendo deseos**
-aprenderHabilidades :: [Habilidades] -> Chico -> Chico
+aprenderHabilidades :: [Habilidades] -> Deseo
 aprenderHabilidades nuevasHabilidades unChico = unChico {habilidad = nuevasHabilidades ++ habilidad unChico} 
 
-serMayor :: Chico -> Chico
+serMayor :: Deseo
 serMayor unChico = unChico {edad = 18} 
 -- serGrosoEnNeedForSpeed unChico = aprenderHabilidades 
 
@@ -86,10 +89,58 @@ data Chica = Chica {
     } deriving (Show,Eq)
 
 trixie = Chica "Trixie Tang" noEsTimmy
-vicky = Chica "Vicky" (tieneHabilidad "ser un supermodelo noruego") 
+vicky = Chica "Vicky" (tieneHabilidad "Ser un supermodelo noruego") 
 
 noEsTimmy =  (/= "Timmy").nombre  
 noEsTimmy' unChico = nombre unChico /= "Timmy"
 
--- quienConquistaA :: Chica -> [Chico] -> Chico
--- quienConquistaA unaChica losPretendientes = head.filter (condicionDeEleccion unaChica) losPretendientes
+pretendientes = [chico,taxiDriver,chicoSinHabilidadCon2Deseos,chico2]
+pretendientesFinal = [taxiDriver,chicoSinHabilidadCon2Deseos]  
+
+quienConquistaA :: Chica -> [Chico] -> Chico
+quienConquistaA unaChica listaDePretendientes
+        | (any(True==).map(condicionDeEleccion unaChica)) listaDePretendientes = head $filter (condicionDeEleccion unaChica) listaDePretendientes  
+        | otherwise = last $filter (condicionDeEleccion unaChica) listaDePretendientes
+
+
+-- Dar un ejemplo de consulta para una nueva chica, cuya condición para elegir a un chico es que este sepa cocinar
+nuevaChica :: Chica
+nuevaChica = Chica "Gula" (tieneHabilidad "Que sepa cocinar")
+
+-- -   **infractoresDeDaRules**:  Dada  una  lista  de  chicos,  devuelve  la  lista  de  los  nombres  de  aquellos que tienen deseos prohibidos.
+-- Un deseo  está  prohibido  si,  al  aplicarlo, -- entre  las  cinco primeras habilidades, hay alguna prohibida.
+--   En  tanto,  son  habilidades  prohibidas  enamorar,  matar y dominar el mundo. 
+
+-- ejemplo de chico con deseo prohibido
+galan = Chico "Tarzan" 25 [] [aprenderHabilidades ["enamorar"]]
+-- ejemplo de chico con deseo prohibido en la 6ta posicion deberia no ser infractor
+asesinofallido = Chico "Chapa de plastico" 20 [] [serMayor,serMayor,serMayor,serMayor,serMayor,aprenderHabilidades ["asesino"]] 
+asesino = Chico "Ted Bundy" 30 [] [aprenderHabilidades ["dominar el mundo"],aprenderHabilidades ["secuestrar"],aprenderHabilidades ["enganar"],aprenderHabilidades ["sociabilizar"],aprenderHabilidades ["matar"]] 
+
+chicosConDeseosProhibidos = [galan,taxiDriver,chico,asesino] --deberia ser ok
+chicosConDeseosNoProhibidos = [taxiDriver,chico] --deberia no retornar nombres
+
+
+deseoProhibido :: String -> Bool
+deseoProhibido deseo =  deseo == "enamorar" || deseo == "matar" || deseo == "dominar el mundo" 
+
+infractoresDeDaRules :: [Chico] -> [String]
+infractoresDeDaRules = 
+algunoConDeseosProhibidos  unChico = any( deseoProhibido ) $(take 5.habilidad.cumplirDeseo Todos) asesino      
+
+-- infractoresDeDaRules  =  
+-- infractoresDeDaRules  =  filter (deseoProhibido). (cumplirDeseo Todos)
+
+
+
+-- ya implementadas
+-- cumplirDeseo Todos unChico =  foldl aplicarUnDeseo unChico $deseo unChico  
+-- tieneHabilidad unaHabilidad  = elem unaHabilidad . habilidad
+
+-- anda
+-- (filter (deseoProhibido) . take 5)
+
+-- anda
+-- filter (deseoProhibido) $(take 6.habilidad.cumplirDeseo Todos) asesino
+
+-- infractoresDeDaRules :: [Chico] -> [String]

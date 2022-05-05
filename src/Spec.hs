@@ -43,3 +43,6 @@ suiteDeTestsDeParte2 = describe "Padrinos magios" $ do
 
 -- tieneHabilidad "Conducir" chicoPeligroso `shouldBe` True
 -- esSuperMaduro taxiDriver True
+
+--quienConquistaA vicky pretendientes 
+-- Chico {nombre = "bobi", edad = 10, habilidad = ["Ser un supermodelo noruego"], deseo = [<una función>]}
