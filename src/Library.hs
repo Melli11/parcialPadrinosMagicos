@@ -124,8 +124,8 @@ chicosConDeseosNoProhibidos = [taxiDriver,chico] --deberia no retornar nombres
 deseoProhibido :: String -> Bool
 deseoProhibido deseo =  deseo == "enamorar" || deseo == "matar" || deseo == "dominar el mundo" 
 
-infractoresDeDaRules :: [Chico] -> [String]
-infractoresDeDaRules = 
+-- infractoresDeDaRules :: [Chico] -> [String]
+-- infractoresDeDaRules = 
 algunoConDeseosProhibidos  unChico = any( deseoProhibido ) $(take 5.habilidad.cumplirDeseo Todos) asesino      
 
 -- infractoresDeDaRules  =  
