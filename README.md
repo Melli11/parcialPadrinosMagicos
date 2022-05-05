@@ -13,14 +13,14 @@ De los chicos se conoce su **nombre**, **edad**, **sus habilidades** y sus **des
 
 1. **Concediendo deseos**
    1. Desarrollar los siguiente deseos y declarar el data Chico
-      1. aprenderHabilidades habilidades unChico : agrega una lista de habilidades nuevas a las que ya tiene el chico.
-      2. serGrosoEnNeedForSpeed unChico: dado un chico, le agrega las habilidades de  jugar  a  todas  las  versiones  pasadas  y  futuras  del  Need  For  Speed,  que son: “jugar need for speed 1”, “jugar need for speed 2”, etc.
-      3. serMayor unChico: Hace que el chico tenga 18 años.
+      1. **aprenderHabilidades habilidades unChico** : agrega una lista de habilidades nuevas a las que ya tiene el chico.
+      2. **serGrosoEnNeedForSpeed unChico**: dado un chico, le agrega las habilidades de  jugar  a  todas  las  versiones  pasadas  y  futuras  del  Need  For  Speed,  que son: “jugar need for speed 1”, “jugar need for speed 2”, etc.
+      3. **serMayor unChico**: Hace que el chico tenga 18 años.
 
    2. Los  padrinos  son  seres  mágicos  capaces  de  cumplir  los  deseos  de  sus  ahijados.  Desarrollar los siguientes padrinos:
-      1. wanda: dado un chico, wanda le cumple el primer deseo y lo hace madurar (crecer un año de edad).
-      2. cosmo: dado un chico, lo hace “des”madurar, quedando con la mitad de años de edad. Como es olvidadizo, no le concede ningún deseo.
-      3. muffinMagico: dado un chico le concede todos sus deseos. 
+      1. **wanda**: dado un chico, wanda le cumple el primer deseo y lo hace madurar (crecer un año de edad).
+      2. **cosmo**: dado un chico, lo hace “des”madurar, quedando con la mitad de años de edad. Como es olvidadizo, no le concede ningún deseo.
+      3. **muffinMagico**: dado un chico le concede todos sus deseos. 
 
 ***Nota importante***: no debe haber lógica repetida entre* wanda*,* cosmo *y* serMayor
 
