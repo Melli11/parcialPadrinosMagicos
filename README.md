@@ -4,7 +4,8 @@
 
 *“Timmy is an average kid that no one understands...” ![](Aspose.Words.df28e612-e891-4b73-ae61-b31e4ab6141d.001.png)*
 
-![gif](https://imgur.com/gallery/ZEhsbMS)
+![anigif_sub-buzz-30689-1530610991-1](https://user-images.githubusercontent.com/54424951/167045301-db6f3ef8-53d7-4abe-8aa9-29a288f5a691.gif)
+
 
 En  la  ciudad  de  Dimmsdale,  los  chicos  pueden  contar  con  padrinos  mágicos  que  cumplen  sus  deseos.  Y  Jorgen  Von  Strángulo,   encargado  de  supervisar  toda  la  actividad  mágica  del  lugar,  nos  encargó  un  sistema  funcional  para  poder  entender a los ahijados. 
 
