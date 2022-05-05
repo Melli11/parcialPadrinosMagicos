@@ -2,6 +2,8 @@
 
 *“Timmy is an average kid that no one understands...” ![](Aspose.Words.df28e612-e891-4b73-ae61-b31e4ab6141d.001.png)*
 
+![anigif_sub-buzz-30689-1530610991-1](https://user-images.githubusercontent.com/54424951/167044792-2e3a123e-a473-4cef-ab30-b010a4cd48eb.gif)
+
 En  la  ciudad  de  Dimmsdale,  los  chicos  pueden  contar  con  padrinos  mágicos  que  cumplen  sus  deseos.  Y  Jorgen  Von  Strángulo,   encargado  de  supervisar  toda  la  actividad  mágica  del  lugar,  nos  encargó  un  sistema  funcional  para  poder  entender a los ahijados. 
 
 De los chicos se conoce su **nombre**, **edad**, **sus habilidades** y sus **deseos**. Por ejemplo: timmy = Chico “Timmy” 10 [“mirar television”, “jugar en la pc”] [serMayor]
